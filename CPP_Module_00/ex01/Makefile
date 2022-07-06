@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 10:53:09 by acroisie          #+#    #+#              #
-#    Updated: 2022/07/06 14:35:27 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/07/06 16:26:03 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,25 +18,28 @@ NAME				= PhoneBook
 
 OBJS_DIR			= srcs/objs
 
-PATH				= srcs/
+INC_DIR				= includes/
+
+SRCS_DIR			= srcs/
 
 OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 OBJS				= $(SRCS:.cpp=.o)
 
-DEPENDENCIES		= $(OBJECTS_PREFIXED:.o=.d)
+SRCS				=	main.cpp \
+						Contact.cpp \
+						PhoneBook.cpp
 
-SRCS				=	$(PATH)main.cpp \
-						$(PATH)Contact.cpp
-		
+INC					=	$(INC_DIR)Contact.hpp \
+						$(INC_DIR)PhoneBook.hpp
+
 all: $(NAME)
 
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
-	@mkdir -p $(OBJS_DIR)/$(PATH)
-
-$(OBJS_DIR)/%.o : %.cpp Makefile | $(OBJS_DIR)
-	$(CC) $(CC_FLAGS) -MMD -c $< -o $@
+	
+$(OBJS_DIR)/%.o: $(SRCS_DIR)%.cpp Makefile $(INC) $(OBJS_DIR)
+	$(CC) $(CC_FLAGS) -c $< -o $@ -I $(INC_DIR)
 
 $(NAME): $(OBJECTS_PREFIXED)
 	$(CC) -o $(NAME) $(OBJECTS_PREFIXED) $(CC_FLAGS)
@@ -44,11 +47,9 @@ $(NAME): $(OBJECTS_PREFIXED)
 clean:
 	rm -rf $(OBJS_DIR)
 
-fclean: clean
+fclean: clean$
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY:	all clean fclean re
-
--include $(DEPENDENCIES)%
+.PHONY: all clean fclean re

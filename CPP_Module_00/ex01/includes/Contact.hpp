@@ -6,12 +6,11 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:55:30 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 14:31:43 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 16:06:23 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #ifndef CONTACT
-// # define CONTACT
+#pragma once
 
 # include <string>
 # include <iostream>
@@ -41,5 +40,3 @@ public:
 	int			GetPhoneNumber() const;
 	void		SetPhoneNumber(int PhoneNumber);
 };
-
-// #endif

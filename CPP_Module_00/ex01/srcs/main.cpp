@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:21:07 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 13:46:30 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 15:28:57 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	main(void)
 {
-	Contact instance;
-
+	
 	return (0);
 }

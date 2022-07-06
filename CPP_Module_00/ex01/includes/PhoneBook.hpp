@@ -6,12 +6,11 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:08:19 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 13:29:22 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 16:06:20 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#pragma once
 
 # include "../includes/Contact.hpp"
 
@@ -23,6 +22,5 @@ private:
 public:
 	PhoneBook(void);
 	~PhoneBook();
+	
 };
-
-#endif
