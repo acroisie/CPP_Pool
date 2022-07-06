@@ -6,15 +6,19 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/05 17:02:42 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 14:34:40 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Contact.hpp"
 
+/*---------------Constructors/Destructor-------------*/
+
 Contact::Contact():_PhoneNumber(0){}
 
 Contact::~Contact(){}
+
+/*---------------------Accessors---------------------*/
 
 std::string	Contact::GetFirstName() const
 {

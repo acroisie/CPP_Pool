@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 10:53:09 by acroisie          #+#    #+#              #
-#    Updated: 2022/07/05 17:07:37 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/07/06 14:35:27 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,12 +28,12 @@ DEPENDENCIES		= $(OBJECTS_PREFIXED:.o=.d)
 
 SRCS				=	$(PATH)main.cpp \
 						$(PATH)Contact.cpp
-
+		
 all: $(NAME)
 
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
-	@mkdir -p $(OBJS_DIR)/$(DEF)
+	@mkdir -p $(OBJS_DIR)/$(PATH)
 
 $(OBJS_DIR)/%.o : %.cpp Makefile | $(OBJS_DIR)
 	$(CC) $(CC_FLAGS) -MMD -c $< -o $@
