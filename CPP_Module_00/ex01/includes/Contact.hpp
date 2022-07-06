@@ -6,15 +6,14 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:55:30 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 16:06:23 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 16:56:25 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <string>
-# include <iostream>
-# include <iomanip>
+#include <string>
+#include <iostream>
 
 class Contact
 {

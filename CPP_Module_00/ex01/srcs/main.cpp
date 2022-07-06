@@ -6,14 +6,18 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:21:07 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 15:28:57 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 16:48:57 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Contact.hpp"
+#include "../includes/PhoneBook.hpp"
 
 int	main(void)
 {
-	
+	PhoneBook book;
+	while (1)
+	{
+		
+	}
 	return (0);
 }

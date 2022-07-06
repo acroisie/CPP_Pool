@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 14:52:16 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/06 16:37:37 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 /*---------------Constructors/Destructor-------------*/
 
-Contact::Contact():_PhoneNumber(0){}
+Contact::Contact():_PhoneNumber(0){std::cout << "Contact constructor called" << std::endl;}
 
-Contact::~Contact(){}
+Contact::~Contact(){std::cout << "Phonebook constructor called" << std::endl;}
 
 /*---------------------Accessors---------------------*/
 
