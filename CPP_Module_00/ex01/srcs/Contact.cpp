@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/11 14:36:47 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/11 20:21:27 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 /*---------------Constructors/Destructor-------------*/
 
-Contact::Contact():_PhoneNumber(0)
+Contact::Contact(void)
 {
 	std::cout << "Contact constructor called" << std::endl;
 	return;
 }
 
-Contact::~Contact()
+Contact::~Contact(void)
 {
 	std::cout << "Contact destructor called" << std::endl;
 	return;
@@ -68,12 +68,12 @@ void	Contact::SetDarkestSecret(const std::string& DarkestSecret)
 	_DarkestSecret = DarkestSecret;
 }
 
-int		Contact::GetPhoneNumber() const
+std::string	Contact::GetPhoneNumber() const
 {
 	return (_PhoneNumber);
 }
 
-void	Contact::SetPhoneNumber(const int& PhoneNumber)
+void	Contact::SetPhoneNumber(const std::string& PhoneNumber)
 {
 	_PhoneNumber = PhoneNumber;
 }

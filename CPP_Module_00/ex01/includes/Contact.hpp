@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:55:30 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/11 11:32:14 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/11 20:21:44 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 	std::string	_LastName;
 	std::string	_NickName;
 	std::string	_DarkestSecret;
-	int			_PhoneNumber;
+	std::string	_PhoneNumber;
 
 public:
 	Contact(void);
@@ -36,6 +36,6 @@ public:
 	void		SetNickName(const std::string& NickName);
 	std::string	GetDarkestSecret() const;
 	void		SetDarkestSecret(const std::string& DarkestSecret);
-	int			GetPhoneNumber() const;
-	void		SetPhoneNumber(const int& PhoneNumber);
+	std::string	GetPhoneNumber() const;
+	void		SetPhoneNumber(const std::string& PhoneNumber);
 };
