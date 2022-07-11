@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:55:30 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 16:56:25 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/11 11:32:14 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ public:
 	~Contact();
 
 	std::string	GetFirstName() const;
-	void		SetFirstName(std::string FirstName);
+	void		SetFirstName(const std::string& FirstName);
 	std::string	GetLastName() const;
-	void		SetLastName(std::string LastName);
+	void		SetLastName(const std::string& LastName);
 	std::string	GetNickName() const;
-	void		SetNickName(std::string NickName);
+	void		SetNickName(const std::string& NickName);
 	std::string	GetDarkestSecret() const;
-	void		SetDarkestSecret(std::string DarkestSecret);
+	void		SetDarkestSecret(const std::string& DarkestSecret);
 	int			GetPhoneNumber() const;
-	void		SetPhoneNumber(int PhoneNumber);
+	void		SetPhoneNumber(const int& PhoneNumber);
 };

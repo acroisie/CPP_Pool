@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/06 16:37:37 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/11 14:36:47 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,58 +14,66 @@
 
 /*---------------Constructors/Destructor-------------*/
 
-Contact::Contact():_PhoneNumber(0){std::cout << "Contact constructor called" << std::endl;}
+Contact::Contact():_PhoneNumber(0)
+{
+	std::cout << "Contact constructor called" << std::endl;
+	return;
+}
 
-Contact::~Contact(){std::cout << "Phonebook constructor called" << std::endl;}
+Contact::~Contact()
+{
+	std::cout << "Contact destructor called" << std::endl;
+	return;
+}
 
 /*---------------------Accessors---------------------*/
 
 std::string	Contact::GetFirstName() const
 {
-	return (this->_FirstName);
+	return (_FirstName);
 }
 
-void	Contact::SetFirstName(std::string FirstName)
+void	Contact::SetFirstName(const std::string& FirstName)
 {
-	this->_FirstName = FirstName;
+	_FirstName = FirstName;
 }
 
 std::string	Contact::GetLastName() const
 {
-	return (this->_LastName);
+	return (_LastName);
 }
 
-void	Contact::SetLastName(std::string LastName)
+void	Contact::SetLastName(const std::string& LastName)
 {
-	this->_LastName = LastName;
+	_LastName = LastName;
 }
 
 std::string	Contact::GetNickName() const
 {
-	return (this->_NickName);
+	return (_NickName);
 }
 
-void	Contact::SetNickName(std::string NickName)
+void	Contact::SetNickName(const std::string& NickName)
 {
-	this->_NickName = NickName;
+	_NickName = NickName;
 }
 
 std::string	Contact::GetDarkestSecret() const
 {
-	return (this->_DarkestSecret);
+	return (_DarkestSecret);
 }
 
-void	Contact::SetDarkestSecret(std::string DarkestSecret)
+void	Contact::SetDarkestSecret(const std::string& DarkestSecret)
 {
-	this->_DarkestSecret = DarkestSecret;
+	_DarkestSecret = DarkestSecret;
 }
 
 int		Contact::GetPhoneNumber() const
 {
-	return (this->_PhoneNumber);
+	return (_PhoneNumber);
 }
 
-void	Contact::SetPhoneNumber(int PhoneNumber)
+void	Contact::SetPhoneNumber(const int& PhoneNumber)
 {
-	this->_PhoneNumber = PhoneNumber;
+	_PhoneNumber = PhoneNumber;
 }
