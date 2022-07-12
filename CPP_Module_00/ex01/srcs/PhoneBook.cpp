@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:16:15 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 12:34:09 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 14:27:08 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ std::string	GetString(const std::string& msg)
 	getline(std::cin, string);
 	if (std::cin.eof())
 		exit (1);
+	if (string.length() == 0)
+		string = GetString(msg);
 	return (string);
 }
 
@@ -42,10 +44,9 @@ std::string	ReplaceByPoint(std::string string)
 
 void	PhoneBook::ADD(void)
 {
+	_index++;
 	if (_index > 7)
 		_index = 0;
-	else
-		_index++;
 	list[_index].SetFirstName(GetString("First Name"));
 	list[_index].SetLastName(GetString("Last Name"));
 	list[_index].SetNickName(GetString("Nickname"));
@@ -78,7 +79,7 @@ void	PhoneBook::SEARCH(void)
 	if (index.length() < 0 || index.length() > 1 || list[atoi(index.c_str()) - 1].GetFirstName().length() == 0)
 	{
 		std::cout << "Wrong index" << std::endl;
-		SEARCH();
+		SEARCH(); // A EVITER
 	}
 	else
 	{
