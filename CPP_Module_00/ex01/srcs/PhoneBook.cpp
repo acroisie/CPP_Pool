@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:16:15 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 14:27:08 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 14:49:01 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ std::string	GetString(const std::string& msg)
 {
 	std::string string;
 	
-	std::cout << "Type the " << msg << ": ";
-	getline(std::cin, string);
-	if (std::cin.eof())
-		exit (1);
-	if (string.length() == 0)
-		string = GetString(msg);
+	while (string.length() == 0)
+	{
+		std::cout << "Type the " << msg << ": ";
+		getline(std::cin, string);
+		if (std::cin.eof())
+			exit (1);
+	}
 	return (string);
 }
 
@@ -57,9 +58,11 @@ void	PhoneBook::ADD(void)
 void	PhoneBook::SEARCH(void)
 {
 	int			i;
+	int			validIndex;
 	std::string	index;
 
 	i = 0;
+	validIndex = 0;
 	std::cout << "*----------*----------*----------*----------*" << std::endl;
 	std::cout << "|Index no  |First Name|Last Name |Nick Name |" << std::endl;
 	std::cout << "*----------*----------*----------*----------*" << std::endl;
@@ -72,21 +75,21 @@ void	PhoneBook::SEARCH(void)
 		std::cout << "*----------*----------*----------*----------*" << std::endl;
 		i++;
 	}
-	std::cout << "Type the index number of the contact you want to show: ";
-	getline(std::cin, index);
-	if (std::cin.eof())
-		exit (1);
-	if (index.length() < 0 || index.length() > 1 || list[atoi(index.c_str()) - 1].GetFirstName().length() == 0)
+	while (!validIndex)
 	{
-		std::cout << "Wrong index" << std::endl;
-		SEARCH(); // A EVITER
+		std::cout << "Type the index number of the contact you want to show: ";
+		getline(std::cin, index);
+		if (std::cin.eof())
+			exit (1);
+		if (index.length() < 0 || index.length() > 1 || \
+		list[atoi(index.c_str()) - 1].GetFirstName().length() == 0)
+			std::cout << "Wrong index" << std::endl;
+		else
+			validIndex = 1;
 	}
-	else
-	{
-		std::cout << list[atoi(index.c_str()) - 1].GetFirstName() << std::endl;
-		std::cout << list[atoi(index.c_str()) - 1].GetLastName() << std::endl;
-		std::cout << list[atoi(index.c_str()) - 1].GetNickName() << std::endl;
-		std::cout << list[atoi(index.c_str()) - 1].GetDarkestSecret() << std::endl;
-		std::cout << list[atoi(index.c_str()) - 1].GetPhoneNumber() << std::endl;
-	}
+	std::cout << std::endl << "First Name: " << list[atoi(index.c_str()) - 1].GetFirstName() << std::endl;
+	std::cout << "Last Name: " << list[atoi(index.c_str()) - 1].GetLastName() << std::endl;
+	std::cout << "NickName: " << list[atoi(index.c_str()) - 1].GetNickName() << std::endl;
+	std::cout << "Darkest Secret: "<< list[atoi(index.c_str()) - 1].GetDarkestSecret() << std::endl;
+	std::cout << "Phone Number: " << list[atoi(index.c_str()) - 1].GetPhoneNumber() << std::endl << std::endl;
 }
