@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 10:53:09 by acroisie          #+#    #+#              #
-#    Updated: 2022/07/11 14:12:54 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/07/12 10:24:17 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS_DIR			= srcs/
 OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 OBJS				= $(SRCS:.cpp=.o)
-#ptr sur constructeur de .o
+
 SRCS				=	main.cpp \
 						Contact.cpp \
 						PhoneBook.cpp
@@ -40,7 +40,7 @@ $(NAME): $(OBJECTS_PREFIXED)
 
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
-#createur de .o
+
 $(OBJS_DIR)/%.o: $(SRCS_DIR)%.cpp Makefile $(INC) $(OBJS_DIR)
 	$(CC) $(CC_FLAGS) -c $< -o $@ -I $(INC_DIR)
 

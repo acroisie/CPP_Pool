@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/11 20:21:27 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 10:27:05 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 /*---------------Constructors/Destructor-------------*/
 
-Contact::Contact(void)
-{
-	std::cout << "Contact constructor called" << std::endl;
-	return;
-}
+Contact::Contact(void){};
 
-Contact::~Contact(void)
-{
-	std::cout << "Contact destructor called" << std::endl;
-	return;
-}
+Contact::~Contact(void){};
 
 /*---------------------Accessors---------------------*/
 

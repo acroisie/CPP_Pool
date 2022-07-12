@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:16:15 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/11 20:24:42 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 10:27:26 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 /*---------------Constructors/Destructor-------------*/
 
-PhoneBook::PhoneBook(void):_index(-1)
-{
-	std::cout << "PhoneBook constructor called" << std::endl;
-	return;
-}
+PhoneBook::PhoneBook(void):_index(-1){};
 
-PhoneBook::~PhoneBook(void)
-{
-	std::cout << "PhoneBook destructor called" << std::endl;
-	return;
-}
+PhoneBook::~PhoneBook(void){};
 
 /*------------------Member_functions-----------------*/
 
@@ -50,4 +42,11 @@ void	PhoneBook::ADD(void)
 	list[_index].SetNickName(GetString("Nickname"));
 	list[_index].SetDarkestSecret(GetString("Darkest secret"));
 	list[_index].SetPhoneNumber(GetString("Phone Number"));
+}
+
+void	PhoneBook::SEARCH(void)
+{
+	std::cout << "*----------*----------*----------*----------*" << std::endl;
+	std::cout << "|Index no  |First Name|Last Name |Nick Name |" << std::endl;
+	std::cout << "*----------*----------*----------*----------*" << std::endl;
 }
