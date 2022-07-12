@@ -6,13 +6,13 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 10:27:05 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 10:31:02 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Contact.hpp"
 
-/*---------------Constructors/Destructor-------------*/
+/*---------------Constructors/Destructor--------------*/
 
 Contact::Contact(void){};
 

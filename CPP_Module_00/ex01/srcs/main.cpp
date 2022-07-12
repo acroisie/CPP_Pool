@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:21:07 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 10:18:07 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/12 10:43:43 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int	main(void)
 			exit (1);
 		if (!line.compare("ADD"))
 			book.ADD();
-		// else if (!line.compare("SEARCH"))
-		// 	book.SEARCH();
+		else if (!line.compare("SEARCH"))
+			book.SEARCH();
 		else if (!line.compare("EXIT"))
 			break;
 	}
