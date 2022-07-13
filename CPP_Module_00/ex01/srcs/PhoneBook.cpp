@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:16:15 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 14:49:01 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 10:15:53 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 /*---------------Constructor/Destructor--------------*/
 
-PhoneBook::PhoneBook(void):_index(-1){};
+PhoneBook::PhoneBook(void):_index(-1){}
 
-PhoneBook::~PhoneBook(void){};
+PhoneBook::~PhoneBook(void){}
 
 /*----------------------Functions--------------------*/
 

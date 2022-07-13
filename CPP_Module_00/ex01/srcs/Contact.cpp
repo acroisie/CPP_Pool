@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:15:27 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/12 10:31:02 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 10:17:22 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 /*---------------Constructors/Destructor--------------*/
 
-Contact::Contact(void){};
+Contact::Contact(void){}
 
-Contact::~Contact(void){};
+Contact::~Contact(){}
 
 /*---------------------Accessors---------------------*/
 
