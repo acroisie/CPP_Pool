@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 16:26:19 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/13 17:19:08 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 17:29:06 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ Zombie*	zombieHorde(int N, std::string name)
 	i = 0;
 	Zombie*	horde = new Zombie[N];
 	while (i < N)
-	{
 		horde[i++].setName(name);
-	}
 
 	return (horde);
 }

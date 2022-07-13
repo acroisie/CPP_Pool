@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 16:22:07 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/13 17:22:38 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 17:33:02 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ int	main(void)
 	Zombie*	neganWalkers;
 	Zombie*	rickWalkers;
 	int		i;
+	int		saviorsAmount;
+	int		survivorsAmount;
 
 	i = 0;
-	neganWalkers = zombieHorde(4, "Savior");
-	rickWalkers = zombieHorde(2, "Survivor");
-	while (i < 4)
+	saviorsAmount = 4;
+	survivorsAmount = 6;
+	neganWalkers = zombieHorde(saviorsAmount, "Savior");
+	rickWalkers = zombieHorde(survivorsAmount, "Survivor");
+	while (i < saviorsAmount)
 		neganWalkers[i++].announce();
 	i = 0;
-	while (i < 2)
+	while (i < survivorsAmount)
 		rickWalkers[i++].announce();
 	delete []neganWalkers;
 	delete []rickWalkers;
