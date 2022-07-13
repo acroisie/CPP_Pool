@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 10:38:39 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/13 15:40:22 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 16:10:36 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	main(void)
 {
-	Zombie* test;
+	Zombie* walker;
 
-	test = newZombie("Rob");
-	delete test;
+	walker = newZombie("Alice");
+	walker->announce();
+	randomChump("Bob");
+	delete walker;
 
 	return (0);
 }
