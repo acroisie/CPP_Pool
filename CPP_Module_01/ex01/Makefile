@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 16:18:57 by acroisie          #+#    #+#              #
-#    Updated: 2022/07/13 16:20:01 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/07/13 17:23:09 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC					= c++
 
 CC_FLAGS			= -Wall -Werror -Wextra -std=c++98
 
-NAME				= Moar_brainz!
+NAME				= Moar_brainz
 
 OBJS_DIR			= srcs/objs
 

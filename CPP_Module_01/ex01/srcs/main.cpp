@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 16:22:07 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/13 17:10:14 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/13 17:22:38 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(void)
 	i = 0;
 	while (i < 2)
 		rickWalkers[i++].announce();
+	delete []neganWalkers;
+	delete []rickWalkers;
 
 	return (0);
 }
