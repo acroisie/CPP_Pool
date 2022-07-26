@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:44:50 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/25 14:35:05 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/26 13:45:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	std::ifstream input(argv[1]);
-	std::ofstream output("out.txt");
+	std::ofstream output((std::string) argv[1] + "_replace.txt");
 	if (input && output)
 	{
 		while (getline(input, line))
