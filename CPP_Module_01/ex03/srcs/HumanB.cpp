@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 15:58:01 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/26 13:38:28 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/26 16:07:25 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ HumanB::~HumanB(){}
 
 void	HumanB::attack(void)
 {
-	if( this->_arm != NULL)
+	if (_arm != NULL)
 		std::cout << _name << " attacks with their " << _arm->getType() << std::endl;
 	else
 		std::cout << _name << " attacks zith their fists" << std::endl;
