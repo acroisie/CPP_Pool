@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 15:58:01 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/26 16:07:25 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/27 13:49:32 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	HumanB::attack(void)
 	if (_arm != NULL)
 		std::cout << _name << " attacks with their " << _arm->getType() << std::endl;
 	else
-		std::cout << _name << " attacks zith their fists" << std::endl;
+		std::cout << _name << " attacks with their fists" << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon& weapon)

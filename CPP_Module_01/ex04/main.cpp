@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:44:50 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/26 13:45:07 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/27 13:59:42 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int	main(int argc, char **argv)
 {
 	std::string		line;
-	std::string		s1(argv[2]);
 	size_t			pos;
 
 	if (argc != 4)
@@ -25,8 +24,9 @@ int	main(int argc, char **argv)
 		std::cout << "You must input <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
-	std::ifstream input(argv[1]);
-	std::ofstream output((std::string) argv[1] + "_replace.txt");
+	std::string		s1(argv[2]);
+	std::ifstream	input(argv[1]);
+	std::ofstream	output((std::string) argv[1] + "_replace.txt");
 	if (input && output)
 	{
 		while (getline(input, line))

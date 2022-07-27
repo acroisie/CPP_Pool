@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/05 10:53:09 by acroisie          #+#    #+#              #
-#    Updated: 2022/07/13 10:40:50 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/07/27 13:54:21 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ $(NAME): $(OBJECTS_PREFIXED)
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)%.cpp Makefile $(INC) $(OBJS_DIR)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)%.cpp Makefile $(INC) | $(OBJS_DIR)
 	$(CC) $(CC_FLAGS) -c $< -o $@ -I $(INC_DIR)
 
 clean:
