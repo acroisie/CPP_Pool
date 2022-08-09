@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:53:08 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/09 08:17:33 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/09 09:55:18 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,24 +87,24 @@ bool	Fixed::operator!=(Fixed const& obj)
 	return (_value == obj._value);
 }
 
-int	Fixed::operator+(Fixed const& obj)
+Fixed	Fixed::operator+(Fixed const& obj)
 {
-	return (_value + obj._value);
+	return (Fixed(toFloat() + obj.toFloat()));
 }
 
-int	Fixed::operator-(Fixed const& obj)
+Fixed	Fixed::operator-(Fixed const& obj)
 {
-	return (_value - obj._value);
+	return (Fixed(toFloat() - obj.toFloat()));
 }
 
-int	Fixed::operator*(Fixed const& obj)
+Fixed	Fixed::operator*(Fixed const& obj)
 {
-	return (_value * obj._value);
+	return (Fixed(toFloat() * obj.toFloat()));
 }
 
-int	Fixed::operator/(Fixed const& obj)
+Fixed	Fixed::operator/(Fixed const& obj)
 {
-	return (_value / obj._value);
+	return (Fixed(toFloat() / obj.toFloat()));
 }
 
 Fixed&	Fixed::operator++(void)
