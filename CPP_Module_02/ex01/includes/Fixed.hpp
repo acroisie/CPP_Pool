@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:52:46 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/28 11:11:49 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/09 08:15:12 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cmath>
 
 class Fixed
 {

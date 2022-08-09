@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:53:08 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/28 10:41:58 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/07/29 08:43:23 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,4 @@ void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	_value = raw;
-}``
+}

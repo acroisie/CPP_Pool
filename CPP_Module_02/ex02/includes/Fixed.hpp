@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 16:52:46 by acroisie          #+#    #+#             */
-/*   Updated: 2022/07/28 11:11:49 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/09 08:16:32 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cmath>
 
 class Fixed
 {
@@ -28,13 +29,34 @@ public:
 	Fixed(float const numToConvert);
 	~Fixed();
 
-	Fixed	&operator=(Fixed const& obj);
+	Fixed&	operator=(Fixed const& obj);
+	
+	bool	operator>(Fixed const& obj);
+	bool	operator<(Fixed const& obj);
+	bool	operator>=(Fixed const& obj);
+	bool	operator<=(Fixed const& obj);
+	bool	operator==(Fixed const& obj);
+	bool	operator!=(Fixed const& obj);
+	int		operator+(Fixed const& obj);
+	int		operator-(Fixed const& obj);
+	int		operator*(Fixed const& obj);
+	int		operator/(Fixed const& obj);
+
+	Fixed&	operator++(void);
+	Fixed	operator++(int);
+	Fixed&	operator--(void);
+	Fixed	operator--(int);
 
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 
 	float 	toFloat(void) const;
 	int		toInt(void) const;
+
+	static Fixed&	min(Fixed& obj1, Fixed& obj2);
+	static const Fixed&	min(Fixed const& obj1, Fixed const& obj2);
+	static Fixed&	max(Fixed& obj1, Fixed& obj2);
+	static const Fixed&	max(Fixed const& obj1, Fixed const& obj2);
 	
 };
 
