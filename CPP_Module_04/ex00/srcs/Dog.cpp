@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:14:58 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:50:49 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ Dog&	Dog::operator=(const Dog& obj)
 
 /*------------------Setters/Getters------------------*/
 
-std::string	Dog::getType(void)
+std::string	Dog::getType(void) const
 {
 	return (_type);
 }
 
 /*-----------------MemberFunctions------------------*/
 
-void	Dog::makeSound(void)
+void	Dog::makeSound(void) const
 {
 	std::cout << "Bark, bark!" << std::endl;
 }

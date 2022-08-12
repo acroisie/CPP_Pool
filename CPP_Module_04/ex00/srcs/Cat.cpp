@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 14:56:36 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:50:54 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ Cat&	Cat::operator=(const Cat& obj)
 
 /*------------------Setters/Getters------------------*/
 
-std::string	Cat::getType(void)
+std::string	Cat::getType(void) const
 {
 	return (_type);
 }
 
 /*-----------------MemberFunctions------------------*/
 
-void	Cat::makeSound(void)
+void	Cat::makeSound(void) const
 {
 	std::cout << "Meow, meow!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:31:14 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:51:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ Animal&	Animal::operator=(const Animal& obj)
 
 /*------------------Setters/Getters------------------*/
 
-std::string	Animal::getType(void)
+std::string	Animal::getType(void) const
 {
 	return (_type);
 }
 
 /*-----------------MemberFunctions------------------*/
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
 	std::cout << "Animal make a noise!" << std::endl;
 }

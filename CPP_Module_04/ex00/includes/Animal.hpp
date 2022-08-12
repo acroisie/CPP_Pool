@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:30:26 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:51:22 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ public:
 
 	Animal&	operator=(const Animal& obj);
 	
-	virtual std::string	getType(void);
-	virtual void 		makeSound(void);
+	virtual std::string	getType(void) const;
+	virtual void 		makeSound(void) const;
 };

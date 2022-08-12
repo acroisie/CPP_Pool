@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:03:19 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:51:36 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ public:
 
 	Cat&	operator=(const Cat& obj);
 
-	virtual std::string		getType(void);
-	virtual void			makeSound(void);
+	virtual std::string		getType(void) const;
+	virtual void			makeSound(void) const;
 };
