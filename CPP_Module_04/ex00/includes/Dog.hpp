@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:51:52 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 16:11:40 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	Dog(void);
 	Dog(std::string name);
 	Dog(const Dog& copy);
-	~Dog(void);
+	virtual ~Dog(void);
 
 	Dog&	operator=(const Dog& obj);
 

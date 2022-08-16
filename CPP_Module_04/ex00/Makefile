@@ -6,13 +6,13 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/08/12 09:55:25 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/08/16 09:10:02 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 CC					= c++
 
-CC_FLAGS			= -Wall -Werror -Wextra -std=c++98 -fsanitize=address
+CC_FLAGS			= -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 NAME				= Polymorphisme
 
@@ -29,11 +29,15 @@ OBJS				= $(SRCS:.cpp=.o)
 SRCS				=	Animal.cpp \
 						Cat.cpp \
 						Dog.cpp \
-						main.cpp
+						main.cpp \
+						WrongAnimal.cpp \
+						WrongCat.cpp
 
 INC					=	$(INC_DIR)Animal.hpp \
 						$(INC_DIR)Cat.hpp \
-						$(INC_DIR)Dog.hpp
+						$(INC_DIR)Dog.hpp \
+						$(INC_DIR)WrongCat.hpp \
+						$(INC_DIR)WrongAnimal.hpp
 
 all: $(NAME)
 

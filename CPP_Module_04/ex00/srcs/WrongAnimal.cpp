@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/16 09:54:01 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/12 15:51:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Animal.hpp"
+#include "../includes/WrongAnimal.hpp"
 
 /*---------------Constructor/Destructor--------------*/
 
-Animal::Animal(void):_type("Animal")
+WrongAnimal::WrongAnimal(void):_type("WrongAnimal")
 {
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal& copy)
+WrongAnimal::WrongAnimal(const WrongAnimal& copy)
 {
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "WrongAnimal copy constructor called" << std::endl;
 	*this = copy;
 }
 
-Animal::~Animal(void)
+WrongAnimal::~WrongAnimal(void)
 {
-	std::cout << "Animal default destructor called" << std::endl;
+	std::cout << "WrongAnimal default destructor called" << std::endl;
 }
 
 /*-----------------OverloadingOperator---------------*/
 
-Animal&	Animal::operator=(const Animal& obj)
+WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& obj)
 {
 	_type = obj._type;
 	return (*this);
@@ -40,14 +40,14 @@ Animal&	Animal::operator=(const Animal& obj)
 
 /*------------------Setters/Getters------------------*/
 
-std::string	Animal::getType(void) const
+std::string	WrongAnimal::getType(void) const
 {
 	return (_type);
 }
 
 /*-----------------MemberFunctions------------------*/
 
-void	Animal::makeSound(void) const
+void	WrongAnimal::makeSound(void) const
 {
-	std::cout << "Animal make a noise!" << std::endl;
+	std::cout << "WrongAnimal make a noise!" << std::endl;
 }

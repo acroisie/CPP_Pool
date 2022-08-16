@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/12 15:50:54 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/16 09:53:37 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 Cat::Cat(void)
 {
 	std::cout << "Cat default constructor called" << std::endl;
+	_type = "Cat";
 }
 
 Cat::Cat(std::string name)
