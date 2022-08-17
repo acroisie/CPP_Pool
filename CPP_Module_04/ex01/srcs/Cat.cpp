@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/16 16:48:05 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/17 15:46:09 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ Cat::~Cat()
 Cat&	Cat::operator=(const Cat& obj)
 {
 	_type = obj._type;
+	delete _brain;
+	_brain = new Brain(*obj._brain);
+	// *_brain = *obj._brain;
 	return (*this);
 }
 

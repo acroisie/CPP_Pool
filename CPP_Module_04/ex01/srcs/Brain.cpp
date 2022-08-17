@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 12:55:33 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/16 16:36:41 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/17 15:24:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ Brain::~Brain()
 
 Brain&	Brain::operator=(const Brain& obj)
 {
-	int	i;
-
-	i = 0;
-	while (i++ < 100)
+	for (int i = 0; i < 100; i++)
 		_ideas[i] = obj._ideas[i];
 	return (*this);
 }

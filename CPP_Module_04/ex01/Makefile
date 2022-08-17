@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/08/16 09:10:02 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/08/17 15:17:08 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC					= c++
 
 CC_FLAGS			= -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
-NAME				= Polymorphisme
+NAME				= Je_ne_veux_pas_brûler_le_monde
 
 OBJS_DIR			= srcs/objs
 
@@ -27,6 +27,7 @@ OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 OBJS				= $(SRCS:.cpp=.o)
 
 SRCS				=	Animal.cpp \
+						Brain.cpp \
 						Cat.cpp \
 						Dog.cpp \
 						main.cpp \
@@ -34,6 +35,7 @@ SRCS				=	Animal.cpp \
 						WrongCat.cpp
 
 INC					=	$(INC_DIR)Animal.hpp \
+						$(INC_DIR)Brain.hpp \
 						$(INC_DIR)Cat.hpp \
 						$(INC_DIR)Dog.hpp \
 						$(INC_DIR)WrongCat.hpp \
