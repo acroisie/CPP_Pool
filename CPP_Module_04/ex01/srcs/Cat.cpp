@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/17 15:46:09 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/17 17:13:41 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ Cat::Cat(std::string name)
 {
 	std::cout << "Cat name constructor called" << std::endl;
 	_type = name;
+	_brain = new Brain();
 }
 
-Cat::Cat(const Cat& copy)
+Cat::Cat(const Cat& copy):_brain(NULL)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = copy;
@@ -43,10 +44,9 @@ Cat::~Cat()
 
 Cat&	Cat::operator=(const Cat& obj)
 {
-	_type = obj._type;
 	delete _brain;
 	_brain = new Brain(*obj._brain);
-	// *_brain = *obj._brain;
+
 	return (*this);
 }
 

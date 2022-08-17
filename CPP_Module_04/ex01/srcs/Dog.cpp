@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:34:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/16 16:47:51 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/17 17:45:11 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ Dog::Dog(std::string name)
 {
 	std::cout << "Dog name constructor called" << std::endl;
 	_type = name;
+	_brain = new Brain();
 }
 
-Dog::Dog(const Dog& copy)
+Dog::Dog(const Dog& copy):_brain(NULL)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = copy;
@@ -44,6 +45,9 @@ Dog::~Dog()
 Dog&	Dog::operator=(const Dog& obj)
 {
 	_type = obj._type;
+	delete _brain;
+	_brain = new Brain(*obj._brain);
+
 	return (*this);
 }
 
