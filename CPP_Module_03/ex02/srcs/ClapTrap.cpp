@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 11:28:20 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/10 16:06:20 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/23 14:31:06 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ClapTrap::attack(const std::string& target)
 	}
 	else if (_energyPoints == 0)
 	{
-		std::cout << _name << " has no more energy, need some holidays"\
+		std::cout << _name << " has no more energy, need some holidays!"\
 		<< std::endl;
 	}
 }
@@ -89,6 +89,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "Holidays finaly there for " << _name << "!" << std::endl;	
-	_energyPoints += amount;
+	std::cout << _name << " heal itself!" << std::endl;	
+	_energyPoints--;
+	_hitPoints += amount;
 }
