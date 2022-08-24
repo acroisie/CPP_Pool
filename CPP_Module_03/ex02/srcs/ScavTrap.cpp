@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 15:21:02 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/24 10:39:47 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 11:36:37 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ void	ScavTrap::attack(const std::string& target)
 	}
 	else if (_hitPoints <= 0)
 	{
-		std::cout << _name << " can't do muay thai while being dead..."\
+		std::cout << _name << " can't do muay thai while being dead..." \
 		<< std::endl;	
 	}
 	else if (_energyPoints == 0)
 	{
-		std::cout << _name << " has no more energy points!"\
+		std::cout << _name << " has no more energy points!" \
 		<< std::endl;
 	}
 }

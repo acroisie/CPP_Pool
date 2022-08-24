@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 11:28:20 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/24 10:26:49 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 10:54:02 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,11 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << _name << " heal itself!" << std::endl;
 	if (_energyPoints > 0)
 	{
 		_energyPoints--;
 		_hitPoints += amount;
+		std::cout << _name << " heals itself!" << std::endl;
 	}
 	else
 	{
