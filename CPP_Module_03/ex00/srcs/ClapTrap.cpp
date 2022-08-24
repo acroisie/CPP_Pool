@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 11:28:20 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/23 14:31:06 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 10:26:49 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 /*---------------Constructor/Destructor--------------*/
 
 ClapTrap::ClapTrap(void):_name("unknonw"), _hitPoints(10)\
-, _energyPoints(10), _attackDamage(10)
+, _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name):_name(name), _hitPoints(10)\
-, _energyPoints(10), _attackDamage(10)
+, _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap name constructor called" << std::endl;
 }
@@ -42,7 +42,7 @@ ClapTrap::~ClapTrap()
 ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 {
 	_name = obj._name;
-	_hitPoints =obj._hitPoints;
+	_hitPoints = obj._hitPoints;
 	_energyPoints = obj._energyPoints;
 	_attackDamage = obj._attackDamage;
 	return (*this);
@@ -82,14 +82,22 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 	{
-		std::cout << "Useless attack, because " << _name << " is already \
-		dead..." <<  std::endl;	
+		std::cout << "Useless attack, because " << _name << " is already dead..." \
+		<<  std::endl;	
 	}
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << _name << " heal itself!" << std::endl;	
-	_energyPoints--;
-	_hitPoints += amount;
+	std::cout << _name << " heal itself!" << std::endl;
+	if (_energyPoints > 0)
+	{
+		_energyPoints--;
+		_hitPoints += amount;
+	}
+	else
+	{
+		std::cout << _name << " has no more energy and can't heal itsel, need some holidays!"\
+		<< std::endl;
+	}
 }
