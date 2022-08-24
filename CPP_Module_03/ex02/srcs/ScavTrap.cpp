@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 15:21:02 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/11 09:36:30 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 10:39:47 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ ScavTrap::ScavTrap(std::string name):_gateKeeper(0)
 	_attackDamage = 20;
 }
 
+ScavTrap::ScavTrap(const ScavTrap& copy)
+{
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+	*this = copy;
+}
+
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap default destructor called" << std::endl;
@@ -38,13 +44,33 @@ ScavTrap::~ScavTrap()
 ScavTrap&	ScavTrap::operator=(const ScavTrap& obj)
 {
 	_name = obj._name;
-	_hitPoints =obj._hitPoints;
+	_hitPoints = obj._hitPoints;
 	_energyPoints = obj._energyPoints;
 	_attackDamage = obj._attackDamage;
 	return (*this);
 }
 
 /*-----------------MemberFunctions------------------*/
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (_energyPoints > 0 && _hitPoints > 0)
+	{
+		std::cout << _name << " do some muay thai on " << target << ", involving " \
+		<< _attackDamage << " points of damage!" << std::endl;
+		_energyPoints--;
+	}
+	else if (_hitPoints <= 0)
+	{
+		std::cout << _name << " can't do muay thai while being dead..."\
+		<< std::endl;	
+	}
+	else if (_energyPoints == 0)
+	{
+		std::cout << _name << " has no more energy points!"\
+		<< std::endl;
+	}
+}
 
 void	ScavTrap::guardGate(void)
 {
@@ -57,5 +83,6 @@ void	ScavTrap::guardGate(void)
 	{
 		_gateKeeper = 0;
 		std::cout << _name << " disabled gate keeper mode." << std::endl;
-	}	
+	}
+		
 }

@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 09:36:39 by acroisie          #+#    #+#             */
-/*   Updated: 2022/08/11 10:28:31 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/08/24 10:42:13 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ FragTrap::FragTrap(std::string name)
 	_attackDamage = 30;
 }
 
+FragTrap::FragTrap(const FragTrap& copy)
+{
+	std::cout << "FragTrap copy constructor called" << std::endl;
+	*this = copy;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap default destructor called" << std::endl;
@@ -38,7 +44,7 @@ FragTrap::~FragTrap()
 FragTrap&	FragTrap::operator=(const FragTrap& obj)
 {
 	_name = obj._name;
-	_hitPoints =obj._hitPoints;
+	_hitPoints = obj._hitPoints;
 	_energyPoints = obj._energyPoints;
 	_attackDamage = obj._attackDamage;
 	return (*this);
