@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:27:13 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/13 12:02:37 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/14 09:37:40 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& obj)
 {
-	_name = obj._name;
 	_grade = obj._grade;
 	return (*this);
 }

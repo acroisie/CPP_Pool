@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/13 11:44:43 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/14 08:03:51 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 class Bureaucrat
 {
 private:
-	std::string	_name;
-	int			_grade;
+	const std::string	_name;
+	int					_grade;
 public:
 	Bureaucrat(void);
 	Bureaucrat(std::string name, int grade);
