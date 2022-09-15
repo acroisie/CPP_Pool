@@ -6,15 +6,17 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/14 08:03:51 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 16:13:47 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include "../includes/Form.hpp"
 
-class Bureaucrat
+class	Form;
+class	Bureaucrat
 {
 private:
 	const std::string	_name;
@@ -42,6 +44,7 @@ public:
 
 	std::string	getName() const;
 	int			getGrade() const;
+	void		signForm(Form& form);
 };
 
 std::ostream &operator<<(std::ostream& os, Bureaucrat const& obj);

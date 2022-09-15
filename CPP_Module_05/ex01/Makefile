@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/08/24 16:25:27 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/15 15:41:35 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC					= c++
 
 CC_FLAGS			= -Wall -Werror -Wextra -std=c++98
 
-NAME				= Maman,_quand_je_serai_grand,_je_serai_bureaucrate_!
+NAME				= En_rang,_les_larves_!
 
 OBJS_DIR			= srcs/objs
 
@@ -27,9 +27,11 @@ OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 OBJS				= $(SRCS:.cpp=.o)
 
 SRCS				=	Bureaucrat.cpp \
+						Form.cpp \
 						main.cpp
 
-INC					=	$(INC_DIR)Bureaucrat.hpp
+INC					=	$(INC_DIR)Bureaucrat.hpp \
+						$(INC_DIR)Form.hpp
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:27:13 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/14 09:37:40 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 16:16:59 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,19 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade too low.");
+}
+
+void		Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		if (form.getSigned())
+			std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << _name << " couldn’t sign " << form.getName() << " because " << e.what() << '\n';
+	}
+	
 }

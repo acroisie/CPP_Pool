@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:27:13 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/14 15:14:39 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/15 16:16:10 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 /*---------------Constructor/Destructor--------------*/
 
-Form::Form(void):_name("unknown"), _signed(false), _gradeToSign(50), _gradeToExec(150), _whoSign("noOne")
+Form::Form(void):_name("unknown"), _signed(false), _gradeToSign(50), _gradeToExec(150)
 {
 	std::cout << "Default Form constructor called." << std::endl;
 }
 
-Form::Form(std::string name, int gradeToSign, int gradeToExec):_name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec), _whoSign("noOne")
+Form::Form(std::string name, int gradeToSign, int gradeToExec):_name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec)
 {
 		if (_gradeToSign < 1 || gradeToExec < 1)
 			throw GradeTooHighException();
@@ -28,7 +28,7 @@ Form::Form(std::string name, int gradeToSign, int gradeToExec):_name(name), _sig
 	std::cout << "Default Form constructor called." << std::endl;
 }
 
-Form::Form(const Form& copy):_name(copy.getName()), _signed(copy.getSigned()), _gradeToSign(copy.getGradeToSign()), _gradeToExec(copy.getGradeToExec()), _whoSign("noOne")
+Form::Form(const Form& copy):_name(copy.getName()), _signed(copy.getSigned()), _gradeToSign(copy.getGradeToSign()), _gradeToExec(copy.getGradeToExec())
 {
 	std::cout << "Copy Form constructor called." << std::endl;
 	*this = copy;
@@ -44,16 +44,15 @@ Form::~Form()
 Form&	Form::operator=(const Form& obj)
 {
 	_signed = obj._signed;
-	_whoSign = obj._whoSign;
 	return (*this);
 }
 
 std::ostream &operator<<(std::ostream& os, Form const& obj)
 {
-	os << "- Form name:" << obj.getName() << std::endl
-	<< "- Signed status:" << obj.getSigned() << std::endl
-	<< "- Grade to sign:" << obj.getGradeToSign() << std::endl
-	<< "- Grade to exec:" << obj.getGradeToExec() << std::endl;
+	os << "-Form name: " << obj.getName() << std::endl
+	<< "-Signed status: " << obj.getSigned() << std::endl
+	<< "-Grade to sign: " << obj.getGradeToSign() << std::endl
+	<< "-Grade to exec: " << obj.getGradeToExec() << std::endl;
 	return (os);
 }
 
@@ -98,9 +97,4 @@ void		Form::beSigned(const Bureaucrat& bureaucrat)
 		_signed = true;
 	else
 		throw GradeTooLowException();
-}
-
-void		Form::signForm(void)
-{
-	if ()
 }
