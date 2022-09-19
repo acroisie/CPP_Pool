@@ -1,2 +1,15 @@
 CPP_Module_00/.vscode/settings.json
 CPP_Module_05/ex01/En_rang,_les_larves_!
+.DS_Store
+.vscode/settings.json
+CPP_Module_00/.DS_Store
+CPP_Module_03/.vscode/settings.json
+CPP_Module_04/.vscode/settings.json
+CPP_Module_04/ex02/Classe_abstraite
+CPP_Module_04/ex02/srcs/objs/Animal.o
+CPP_Module_04/ex02/srcs/objs/Brain.o
+CPP_Module_04/ex02/srcs/objs/Cat.o
+CPP_Module_04/ex02/srcs/objs/Dog.o
+CPP_Module_04/ex02/srcs/objs/main.o
+CPP_Module_04/ex02/srcs/objs/WrongAnimal.o
+CPP_Module_04/ex02/srcs/objs/WrongCat.o
