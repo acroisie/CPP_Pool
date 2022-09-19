@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/15 17:09:44 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 11:37:48 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ public:
 	class	GradeTooLowException : public std::exception
 	{
 		public:
-		virtual const char* what() const throw() = 0;
+		virtual const char* what() const throw();
 	};
 	
-	virtual void	beSigned(const Bureaucrat& bureaucrat);
+	void			beSigned(const Bureaucrat& bureaucrat);
 	void			signForm(void);
+
+	// virtual void 	execute(Bureaucrat const & executor) = 0;
 
 	std::string		getName() const;
 	bool			getSigned() const;

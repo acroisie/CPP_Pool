@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/15 16:47:08 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/19 11:15:32 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,12 @@ OBJS				= $(SRCS:.cpp=.o)
 
 SRCS				=	Bureaucrat.cpp \
 						Form.cpp \
-						main.cpp
+						main.cpp \
+						ShrubberyCreationForm.cpp
 
 INC					=	$(INC_DIR)Bureaucrat.hpp \
-						$(INC_DIR)Form.hpp
+						$(INC_DIR)Form.hpp \
+						$(INC_DIR)ShrubberyCreationForm.hpp
 
 all: $(NAME)
 
