@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:29:35 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 14:50:15 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:49:59 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 /*---------------Constructor/Destructor--------------*/
 
-PresidentialPardonForm::PresidentialPardonForm(void): Form("PresidentialPardonForm", 72, 45), _target("unknown")
+PresidentialPardonForm::PresidentialPardonForm(void): Form("PresidentialPardonForm", 25, 5), _target("unknown")
 {
 	std::cout << "Default PresidentialPardonForm constructor called." << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target): Form("PresidentialPardonForm", 72, 45), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target): Form("PresidentialPardonForm", 25, 5), _target(target)
 {
 	std::cout << "Target PresidentialPardonForm constructor called." << std::endl;
 }
@@ -45,10 +45,11 @@ PresidentialPardonForm&	PresidentialPardonForm::operator=(const PresidentialPard
 
 /*-----------------MemberFunctions------------------*/
 
-void	PresidentialPardonForm::execute(Bureaucrat const & executor)
+void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	if (!getSigned())
 		throw std::logic_error("Can't execute a non-signed form.\n");
 	if (executor.getGrade() > getGradeToExec())
 		throw std::logic_error("Can't execute because grade is too low.\n");
+	std::cout << _target << "was forgiven by Zaphod Beeblebrox" << std::endl;
 }

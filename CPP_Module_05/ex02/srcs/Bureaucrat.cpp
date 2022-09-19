@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:27:13 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/15 16:16:59 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:45:31 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,13 @@ void		Bureaucrat::signForm(Form& form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << _name << " couldn’t sign " << form.getName() << " because " << e.what() << '\n';
+		std::cerr << _name << " couldn’t sign " << form.getName() << " because " << e.what() << std::endl;
 	}
 	
+}
+
+void		Bureaucrat::executeForm(Form const& form)
+{
+	
+	form.execute(*this);
 }

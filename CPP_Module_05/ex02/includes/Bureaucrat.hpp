@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/15 16:13:47 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:44:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ public:
 	std::string	getName() const;
 	int			getGrade() const;
 	void		signForm(Form& form);
+	void		executeForm(Form const& form);
 };
 
 std::ostream &operator<<(std::ostream& os, Bureaucrat const& obj);

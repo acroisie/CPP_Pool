@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:28:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 13:22:04 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:50:43 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ public:
 
 	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& obj);
 
-	void					execute(Bureaucrat const & executor);
+	void					execute(Bureaucrat const & executor) const;
 };
 

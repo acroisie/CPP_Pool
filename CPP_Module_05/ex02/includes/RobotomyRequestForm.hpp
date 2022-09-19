@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:28:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 14:46:10 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:53:32 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ public:
 
 	RobotomyRequestForm&	operator=(const RobotomyRequestForm& obj);
 
-	void					execute(Bureaucrat const & executor);
+	void					execute(Bureaucrat const & executor) const;
 };
 

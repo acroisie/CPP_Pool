@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:28:25 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 14:46:14 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:49:02 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ public:
 
 	PresidentialPardonForm&	operator=(const PresidentialPardonForm& obj);
 
-	void					execute(Bureaucrat const & executor);
+	void					execute(Bureaucrat const & executor) const;
 };
 
