@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 11:37:48 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 13:22:10 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ public:
 	void			beSigned(const Bureaucrat& bureaucrat);
 	void			signForm(void);
 
-	// virtual void 	execute(Bureaucrat const & executor) = 0;
+	virtual void 	execute(Bureaucrat const & executor) = 0;
 
 	std::string		getName() const;
 	bool			getSigned() const;
