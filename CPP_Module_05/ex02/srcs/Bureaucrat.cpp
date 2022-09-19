@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:27:13 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:45:31 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 16:55:10 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,13 @@ void		Bureaucrat::signForm(Form& form)
 
 void		Bureaucrat::executeForm(Form const& form)
 {
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	
-	form.execute(*this);
 }

@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:29:35 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:53:44 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/19 17:23:49 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationF
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (!getSigned())
-		throw std::logic_error("Can't execute a non-signed form.\n");
+		throw std::logic_error(executor.getName() + " can't execute a non-signed form.\n");
 	if (executor.getGrade() > getGradeToExec())
-		throw std::logic_error("Can't execute because grade is too low.\n");
+		throw std::logic_error(executor.getName() + " can't execute because grade is too low.\n");
 	std::ofstream	output((std::string)_target + "_shrubbery", std::ios_base::app);
 	
 	output <<	"            ,@@@@@@@," << std::endl <<
