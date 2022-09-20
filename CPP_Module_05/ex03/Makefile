@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/19 14:48:47 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/20 11:32:40 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC					=	c++
 
 CC_FLAGS			=	-Wall -Werror -Wextra -std=c++98
 
-NAME				=	Ah_mais_non,_il_vous_faut_la_28B,_pas_la_28C...
+NAME				=	C’est_toujours_mieux_que_d’apporter_le_café
 
 OBJS_DIR			=	srcs/objs
 
@@ -28,6 +28,7 @@ OBJS				=	$(SRCS:.cpp=.o)
 	
 SRCS				=	Bureaucrat.cpp \
 						Form.cpp \
+						Intern.cpp \
 						main.cpp \
 						PresidentialPardonForm.cpp \
 						RobotomyRequestForm.cpp \
@@ -35,6 +36,7 @@ SRCS				=	Bureaucrat.cpp \
 
 INC					=	$(INC_DIR)Bureaucrat.hpp \
 						$(INC_DIR)Form.hpp \
+						$(INC_DIR)Intern.hpp \
 						$(INC_DIR)PresidentialPardonForm.hpp \
 						$(INC_DIR)RobotomyRequestForm.hpp \
 						$(INC_DIR)ShrubberyCreationForm.hpp

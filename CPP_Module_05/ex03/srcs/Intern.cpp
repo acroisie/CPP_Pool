@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 08:41:54 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/20 10:54:31 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/20 11:31:02 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Intern::~Intern(void)
 
 Intern&	Intern::operator=(const Intern &obj)
 {
+	(void) obj;
 	return (*this);
 }
 

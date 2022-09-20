@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:19:55 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:48:19 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/20 11:52:30 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	Form(void);
 	Form(std::string name, int gradeToSign, int _gradeToExec);
 	Form(const Form& cpy);
-	~Form();
+	virtual ~Form();
 
 	Form&	operator=(const Form& obj);
 
