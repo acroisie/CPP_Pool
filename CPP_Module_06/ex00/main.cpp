@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:03 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/22 11:39:46 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/22 13:20:55 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		main(int argc, char **argv)
 		return (1);
 	}
 	std::string	arg = argv[1];
+	//Debug
 	double dToCast  = std::strtod(arg.c_str(), NULL);
 	convert(dToCast);
 	return (0);
