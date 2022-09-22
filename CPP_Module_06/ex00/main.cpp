@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:03 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/21 17:15:16 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/22 11:39:46 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 #include <typeinfo>
 #include <iomanip>
 
-void	convert(std::string arg)
+void	convert(double dToCast)
 {
-	std::cout << std::fixed << std::setprecision(2);
-	if (arg.length() == 1) //Char
+	if (dToCast >= 32 && dToCast <= 127)
 	{
-		if ((arg[0] >= 58 && arg[0] <= 127) || (arg[0] >= 32 && arg[0] <= 47))
-		{
-			std::cout << "char	: [" << arg[0] << "]" << std::endl;
-			int	integerCast = static_cast<int>(arg[0]);
-			std::cout << "int	: [" << integerCast << "]" << std::endl;
-			float floatCast = static_cast<float>(integerCast);
-			std::cout << "float	: [" << floatCast << "]" << std::endl;
-			float doubleCast = static_cast<double>(integerCast);
-			std::cout << "double	: [" << doubleCast << "]" << std::endl;
-		}
+		char	charCast = static_cast<char>(dToCast);
+		std::cout << "char	: [" << charCast << "]" << std::endl;
 	}
+	else
+	{
+		std::cout << "char	: [" << "Non displayable" << "]" << std::endl;
+	}
+	int		integerCast = static_cast<int>(dToCast);
+	std::cout << "int	: [" << integerCast << "]" << std::endl;
+	float	floatCast = static_cast<float>(dToCast);
+	std::cout << "float	: [" << floatCast << "f]" << std::endl;
+	float	doubleCast = static_cast<double>(dToCast);
+	std::cout << "double	: [" << doubleCast << "]" << std::endl;
 }
 
 
 int		main(int argc, char **argv)
 {
+	std::cout << std::fixed << std::setprecision(1);
 	if (argc != 2)
 	{
 		if (argc < 2)
@@ -44,6 +46,7 @@ int		main(int argc, char **argv)
 		return (1);
 	}
 	std::string	arg = argv[1];
-	convert(arg);
+	double dToCast  = std::strtod(arg.c_str(), NULL);
+	convert(dToCast);
 	return (0);
 }
