@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:03 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/22 13:20:55 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/23 09:37:20 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 #include <typeinfo>
 #include <iomanip>
 
-void	convert(double dToCast)
+void	charCast(double dToCast)
 {
+	if (dToCast != dToCast)
+	{
+		std::cout << "char	: [" << "Impossible" << "]" << std::endl;
+		return ;
+	}
 	if (dToCast >= 32 && dToCast <= 127)
 	{
 		char	charCast = static_cast<char>(dToCast);
@@ -25,14 +30,39 @@ void	convert(double dToCast)
 	{
 		std::cout << "char	: [" << "Non displayable" << "]" << std::endl;
 	}
-	int		integerCast = static_cast<int>(dToCast);
-	std::cout << "int	: [" << integerCast << "]" << std::endl;
-	float	floatCast = static_cast<float>(dToCast);
-	std::cout << "float	: [" << floatCast << "f]" << std::endl;
-	float	doubleCast = static_cast<double>(dToCast);
-	std::cout << "double	: [" << doubleCast << "]" << std::endl;
 }
 
+void	intCast(double dToCast)
+{
+	if (dToCast != dToCast)
+	{
+		std::cout << "int	: [" << "Impossible" << "]" << std::endl;
+		return ;
+	}
+	if (dToCast > -2147483648 && dToCast < 2147483647)
+	{
+		int		integerCast = static_cast<int>(dToCast);
+		std::cout << "int	: [" << integerCast << "]" << std::endl;
+	}
+	else
+	{
+		std::cout << "int	: [" << "Overflow" << "]" << std::endl;	
+	}
+}
+
+void	floatCast(double dToCast)
+{
+	float	floatCast = static_cast<float>(dToCast);
+	std::cout << "float	: [" << floatCast << "f]" << std::endl;
+}
+
+void	convert(double dToCast)
+{
+	charCast(dToCast);
+	intCast(dToCast);
+	floatCast(dToCast);
+	std::cout << "double	: [" << dToCast << "]" << std::endl;
+}
 
 int		main(int argc, char **argv)
 {
@@ -46,8 +76,15 @@ int		main(int argc, char **argv)
 		return (1);
 	}
 	std::string	arg = argv[1];
-	//Debug
 	double dToCast  = std::strtod(arg.c_str(), NULL);
+	if (argv[1][0] != '0' && argv[1][1] != '.')
+	{
+		if (dToCast == 0.0)
+		{
+			std::cout << "Impossible conversion." << std::endl;
+			return (1);
+		}	
+	}
 	convert(dToCast);
 	return (0);
 }
