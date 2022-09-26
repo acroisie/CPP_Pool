@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 15:49:50 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/26 10:46:20 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 15:01:03 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ void	identify(Base* p)
 
 	if ((classA = dynamic_cast<A*>(p)))
 		std::cout << "This is Class A. (Identification made by pointer)." << std::endl; 
-	if ((classB = dynamic_cast<B*>(p)))
+	else if ((classB = dynamic_cast<B*>(p)))
 		std::cout << "This is Class B. (Identification made by pointer)." << std::endl; 
-	if ((classC = dynamic_cast<C*>(p)))
+	else if ((classC = dynamic_cast<C*>(p)))
 		std::cout << "This is Class C. (Identification made by pointer)." << std::endl;
 }
 
@@ -53,31 +53,34 @@ void identify(Base& p)
 	{
 		A&	classA = dynamic_cast<A &>(p);
 		(void) classA;
-		std::cout << "This is Class A. (Identification made by reference)." << std::endl; 
+		std::cout << "This is Class A. (Identification made by reference)." << std::endl;
+		return ;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << std::endl; 
+		// std::cerr << e.what() << std::endl;
 	}
 	try
 	{
 		B&	classB = dynamic_cast<B &>(p);
 		(void) classB;
-		std::cout << "This is Class B. (Identification made by reference)." << std::endl; 
+		std::cout << "This is Class B. (Identification made by reference)." << std::endl;
+		return ;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << std::endl; 
+		// std::cerr << e.what() << std::endl; 
 	}
 	try
 	{
 		C&	classC = dynamic_cast<C &>(p);
 		(void) classC;
-		std::cout << "This is Class C. (Identification made by reference)." << std::endl; 
+		std::cout << "This is Class C. (Identification made by reference)." << std::endl;
+		return ;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << std::endl; 
+		std::cerr << e.what() << std::endl;
 	}
 }
 
