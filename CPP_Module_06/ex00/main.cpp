@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:03 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/26 12:10:43 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 14:46:06 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,17 @@ int		main(int argc, char **argv)
 			std::cout << "Too many arguments." << std::endl;
 		return (1);
 	}
-	std::string	arg = argv[1];
-	double dToCast  = std::strtod(arg.c_str(), NULL);
-	std::cout << "Debug: " << dToCast << std::endl;
+	std::string	arg;
+	double dToCast;
+	if ((argv[1][0] >= 32 && argv[1][0] <= 47) || (argv[1][0] >= 58 && argv[1][0] <= 127))
+	{
+		dToCast = static_cast<int>(argv[1][0]);
+	}
+	else
+	{
+		arg = argv[1];
+		dToCast  = std::strtod(arg.c_str(), NULL);
+	}
 	convert(dToCast);
 	return (0);
 }
