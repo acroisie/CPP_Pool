@@ -14,3 +14,6 @@ CPP_Module_04/ex02/srcs/objs/main.o
 CPP_Module_04/ex02/srcs/objs/WrongAnimal.o
 CPP_Module_04/ex02/srcs/objs/WrongCat.o
 CPP_Module_05/ex03/garden_shrubbery
+CPP_Module_06/ex02/srcs/objs/Base.o
+CPP_Module_06/ex02/srcs/objs/main.o
+.gitignore

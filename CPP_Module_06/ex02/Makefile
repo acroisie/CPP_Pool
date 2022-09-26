@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/23 15:40:19 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/26 10:23:12 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,13 @@ OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 OBJS				= $(SRCS:.cpp=.o)
 
-SRCS				=	Bureaucrat.cpp \
+SRCS				=	Base.cpp \
 						main.cpp
 
-INC					=	$(INC_DIR)Bureaucrat.hpp
+INC					=	$(INC_DIR)A.hpp \
+						$(INC_DIR)B.hpp \
+						$(INC_DIR)Base.hpp \
+						$(INC_DIR)C.hpp
 
 all: $(NAME)
 
