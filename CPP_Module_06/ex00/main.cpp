@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:03 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/26 09:24:34 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/26 12:10:43 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,7 @@ int		main(int argc, char **argv)
 	}
 	std::string	arg = argv[1];
 	double dToCast  = std::strtod(arg.c_str(), NULL);
-	// if (argv[1][0] != '0' && argv[1][1] != '.') Rework this shit
-	// {
-	// 	if (dToCast == 0.0)
-	// 	{
-	// 		std::cout << "Impossible conversion." << std::endl;
-	// 		return (1);
-	// 	}	
-	// }
+	std::cout << "Debug: " << dToCast << std::endl;
 	convert(dToCast);
 	return (0);
 }
