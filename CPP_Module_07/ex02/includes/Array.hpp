@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:59:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/27 16:01:18 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/27 16:27:41 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ public:
 		*this = cpy;
 	}
 	
-	~Array(){}
+	~Array()
+	{
+		delete[] _array;
+	}
 
 	size_t	size(void)
 	{
