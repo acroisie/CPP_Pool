@@ -6,13 +6,13 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/28 14:53:19 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/28 21:43:45 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 CC					= c++
 
-CC_FLAGS			= -Wall -Werror -Wextra -std=c++98
+CC_FLAGS			= -Wall -Werror -Wextra -std=c++98 -g3 -fsanitize=address
 
 NAME				= Span
 

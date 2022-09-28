@@ -6,14 +6,14 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:10:18 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 17:43:29 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/28 21:46:07 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma		once
 
 #include	<vector> 
-#include	<iostream> 
+#include	<iostream>
 
 class Span
 {
@@ -26,7 +26,7 @@ public:
 	Span(const Span& cpy);
 	~Span();
 
-	Span& operator=(const Span& obj);
+	Span& 			operator=(const Span& obj);
 
 	void			addNumber(int numToAdd);
 	unsigned int	shortestSpan(void);
@@ -35,4 +35,4 @@ public:
 	unsigned int	getN(void) const;
 };
 
-std::ostream &operator<<(std::ostream& os, Span const& obj);
+std::ostream&		operator<<(std::ostream& os, Span const& obj);
