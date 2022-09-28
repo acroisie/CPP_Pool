@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/28 14:09:33 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/28 14:53:19 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,10 @@ OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 OBJS				= $(SRCS:.cpp=.o)
 
-SRCS				=	main.cpp
+SRCS				=	main.cpp \
+						Span.cpp
 
-INC					=	$(INC_DIR)easyfind.hpp
+INC					=	$(INC_DIR)Span.hpp
 
 all: $(NAME)
 
