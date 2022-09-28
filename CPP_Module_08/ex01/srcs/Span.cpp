@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:40:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 17:14:47 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/28 17:43:14 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,19 @@ std::ostream &operator<<(std::ostream& os, Span const& obj)
 	return (os);
 }
 
+/*---------------------Accessors--------------------*/
+
+unsigned int	Span::getN(void) const
+{
+	return (_N);
+}
+
 /*-----------------MemberFunctions------------------*/
 
-void	Span::addNumber(int numToAdd)
+unsigned int	Span::addNumber(int numToAdd)
 {
 	if (*_array.end() < _N)
 		_array.push_back(numToAdd);
 	else
 		throw std::logic_error("Array already full.");
-}
-
-unsigned int	Span::getN(void) const
-{
-	return (_N);
 }

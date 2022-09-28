@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:10:18 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 17:13:31 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/28 17:43:29 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ public:
 	Span& operator=(const Span& obj);
 
 	void			addNumber(int numToAdd);
-	void			shortestSpan(void);
-	void			longestSpan(void);
+	unsigned int	shortestSpan(void);
+	unsigned int	longestSpan(void);
 
 	unsigned int	getN(void) const;
 };
