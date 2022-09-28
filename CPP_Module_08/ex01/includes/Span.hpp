@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 08:47:34 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 14:50:28 by acroisie         ###   ########lyon.fr   */
+/*   Created: 2022/09/28 14:10:18 by acroisie          #+#    #+#             */
+/*   Updated: 2022/09/28 14:22:59 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma		once
-#include	<set>
-#include	<list>
 #include	<vector>
-#include	<iostream>
-#include	<iterator>
 
-template <typename T> 
-void easyfind(T& container, int toFind)
+class Span
 {
-	typename T::iterator	it;
+private:
+	std::vector<int>	N;
+public:
+	Span(void);
+	~Span();
+};
 
-	it = std::find(container.begin(), container.end(), toFind);
-    if (it != container.end())
-		std::cout << "easyFind match [" << (*it) << "]" << std::endl;
-    else
-        throw std::exception();
-}
