@@ -6,7 +6,7 @@
 #    By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 09:45:32 by acroisie          #+#    #+#              #
-#    Updated: 2022/09/29 11:16:26 by acroisie         ###   ########lyon.fr    #
+#    Updated: 2022/09/29 11:53:14 by acroisie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC					= c++
 
 CC_FLAGS			= -Wall -Werror -Wextra -std=c++98
 
-NAME				= Span
+NAME				= Abomination_mutante
 
 OBJS_DIR			= srcs/objs
 
@@ -27,9 +27,8 @@ OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR)/, $(OBJS))
 OBJS				= $(SRCS:.cpp=.o)
 
 SRCS				=	main.cpp \
-						Span.cpp
 
-INC					=	$(INC_DIR)Span.hpp
+INC					=	$(INC_DIR)MutantStack.hpp
 
 all: $(NAME)
 

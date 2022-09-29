@@ -6,13 +6,11 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:09:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/29 11:02:03 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 11:17:51 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../includes/Span.hpp"
-#include <vector>
-
 
 int	main(void)
 {
