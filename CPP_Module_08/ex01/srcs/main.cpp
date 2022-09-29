@@ -6,11 +6,13 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:09:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/29 08:16:07 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 11:02:03 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../includes/Span.hpp"
+#include <vector>
+
 
 int	main(void)
 {
@@ -32,11 +34,18 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 		return (1);
 	}
+	std::vector<int> v;
+	std::srand(time(NULL));
+	for(int i = 0; i < 10000; i++)
+	{
+		v.push_back(rand());
+	}
+
 	try
 	{
 		Span	sp = Span(10000);
 
-		sp.addNumber(sp._array.begin(), sp._array.end());
+		sp.addNumber(v.begin(), v.end());
 
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;

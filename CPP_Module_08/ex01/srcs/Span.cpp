@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Span.cpp                                           :+:      :+:    :+:   */
+/*   span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:40:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/29 08:14:26 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 11:04:16 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,20 @@ Span::~Span()
 
 Span&			Span::operator=(const Span& obj)
 {
-	_array = obj._array;
+	array = obj.array;
+	_N = obj._N;
 	return (*this);
 }
 
 std::ostream&	operator<<(std::ostream& os, Span const& obj)
 {
-	os << "Array size is [" << obj.getN() << "]" << std::endl;
+	os << "Array size is [" << obj.getSize() << "]" << std::endl;
 	return (os);
 }
 
 /*---------------------Accessors--------------------*/
 
-unsigned int	Span::getN(void) const
+unsigned int	Span::getSize(void) const
 {
 	return (_N);
 }
@@ -57,8 +58,8 @@ unsigned int	Span::getN(void) const
 
 void			Span::addNumber(int numToAdd)
 {
-	if ((unsigned int)(_array.size()) < _N)
-		_array.push_back(numToAdd);
+	if ((unsigned int)(array.size()) < _N)
+		array.push_back(numToAdd);
 	else
 		throw std::logic_error("Array already full.");
 }
@@ -66,11 +67,11 @@ void			Span::addNumber(int numToAdd)
 unsigned int	Span::shortestSpan(void)
 {
 	if (_N < 2)
-		throw std::invalid_argument("You must have a least");
-	std::vector<int>::iterator it = _array.begin();
+		throw std::invalid_argument("You must have at least 2 numbers.");
+	std::vector<int>::iterator it = array.begin();
 	unsigned int	tmp = 4294967295;
-	std::sort(_array.begin(), _array.end());
-	while (it < _array.end() - 1)
+	std::sort(array.begin(), array.end());
+	while (it < array.end() - 1)
 	{
 		if (tmp > (unsigned int)(*(it + 1) - *it))
 			tmp = (unsigned int)(*(it + 1) - *it);
@@ -82,9 +83,9 @@ unsigned int	Span::shortestSpan(void)
 unsigned int	Span::longestSpan(void)
 {
 	if (_N < 2)
-		throw std::invalid_argument("You must have a least");
-	int max = *std::max_element(_array.begin(),_array.end());
-	int min = *std::min_element(_array.begin(),_array.end());
+		throw std::invalid_argument("You must have at least 2 numbers.");
+	int max = *std::max_element(array.begin(),array.end());
+	int min = *std::min_element(array.begin(),array.end());
 	return(max - min);
 }
 
@@ -92,12 +93,12 @@ void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 {
 	while (begin != end)
 	{
-		if ((unsigned int)(_array.size()) < _N)
+		if ((unsigned int)(array.size()) <= _N)
 		{
-			_array.insert(begin, rand());
-			begin++;
+			array.push_back(*begin);
 		}
-		else
-			throw std::logic_error("Array already full.");
+		begin++;
 	}
+	if (begin != end)
+		throw std::logic_error("Array already full.");
 }

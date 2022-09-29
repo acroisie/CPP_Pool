@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:10:18 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/29 08:18:59 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 11:04:15 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Span
 private:
 	unsigned int		_N;
 public:
-	std::vector<int>	_array;
+	std::vector<int>	array;
 	Span(void);
 	Span(unsigned int N);
 	Span(const Span& cpy);
@@ -33,7 +33,7 @@ public:
 	unsigned int	shortestSpan(void);
 	unsigned int	longestSpan(void);
 
-	unsigned int	getN(void) const;
+	unsigned int	getSize(void) const;
 };
 
 std::ostream&		operator<<(std::ostream& os, Span const& obj);
