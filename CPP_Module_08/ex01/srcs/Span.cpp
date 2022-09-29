@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:40:40 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 21:52:01 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 08:14:26 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ unsigned int	Span::getN(void) const
 
 void			Span::addNumber(int numToAdd)
 {
-	if (*_array.end() < _N)
+	if ((unsigned int)(_array.size()) < _N)
 		_array.push_back(numToAdd);
 	else
 		throw std::logic_error("Array already full.");
@@ -67,13 +67,13 @@ unsigned int	Span::shortestSpan(void)
 {
 	if (_N < 2)
 		throw std::invalid_argument("You must have a least");
-	std::vector<unsigned int>::iterator it = _array.begin();
+	std::vector<int>::iterator it = _array.begin();
 	unsigned int	tmp = 4294967295;
 	std::sort(_array.begin(), _array.end());
 	while (it < _array.end() - 1)
 	{
-		if (tmp > (*(it + 1) - *it))
-			tmp = *(it + 1) - *it;
+		if (tmp > (unsigned int)(*(it + 1) - *it))
+			tmp = (unsigned int)(*(it + 1) - *it);
 		it++;
 	}
 	return(tmp);
@@ -86,4 +86,18 @@ unsigned int	Span::longestSpan(void)
 	int max = *std::max_element(_array.begin(),_array.end());
 	int min = *std::min_element(_array.begin(),_array.end());
 	return(max - min);
+}
+
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	while (begin != end)
+	{
+		if ((unsigned int)(_array.size()) < _N)
+		{
+			_array.insert(begin, rand());
+			begin++;
+		}
+		else
+			throw std::logic_error("Array already full.");
+	}
 }

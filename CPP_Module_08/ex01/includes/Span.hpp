@@ -6,7 +6,7 @@
 /*   By: acroisie <acroisie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:10:18 by acroisie          #+#    #+#             */
-/*   Updated: 2022/09/28 21:46:07 by acroisie         ###   ########lyon.fr   */
+/*   Updated: 2022/09/29 08:18:59 by acroisie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class Span
 {
 private:
-	std::vector<int>	_array;
 	unsigned int		_N;
 public:
+	std::vector<int>	_array;
 	Span(void);
 	Span(unsigned int N);
 	Span(const Span& cpy);
@@ -29,6 +29,7 @@ public:
 	Span& 			operator=(const Span& obj);
 
 	void			addNumber(int numToAdd);
+	void			addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 	unsigned int	shortestSpan(void);
 	unsigned int	longestSpan(void);
 
